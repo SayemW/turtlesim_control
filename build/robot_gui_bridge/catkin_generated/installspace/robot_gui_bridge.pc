@@ -1,0 +1,8 @@
+prefix=/home/sayem/turtSim/turtlesim_control/install
+
+Name: robot_gui_bridge
+Description: Description of robot_gui_bridge
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/sayem/turtSim/turtlesim_control/install/lib 
+Requires: 

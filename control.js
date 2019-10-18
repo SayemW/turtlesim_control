@@ -19,25 +19,15 @@ ros.on("close", function() {
     "<span style='color: gray;'>Closed</span>";
 });
 
-// Listening to a ROS topic
-var txt_listener = new ROSLIB.Topic({
-  ros: ros,
-  name: "/txt_msg",
-  messageType: "std_msgs/String"
-});
-
-/* txt_listener.subscribe(function(m) {
-    document.getElementById("msg").innerHTML = m.data;
-}); */
-
 // Publish a ROS Topic
 cmd_vel_listener = new ROSLIB.Topic({
   ros: ros,
-  name: "/cmd_vel",
+  name: "/turtle1/cmd_vel",
   messageType: "geometry_msgs/Twist"
 });
 
 move = function(linear, angular) {
+  //console.log("Moving Function");
   var twist = new ROSLIB.Message({
     linear: {
       x: linear,
